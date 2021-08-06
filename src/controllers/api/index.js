@@ -39,7 +39,16 @@ const getLastWorkout = async (req, res) => {
   }
 };
 
-const createWorkout = (req, res) => {};
+const createWorkout = async (req, res) => {
+  try {
+    const newWorkout = await Workout.create({});
+
+    return res.json(newWorkout);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to create new workout" });
+  }
+};
 
 const updateWorkout = (req, res) => {};
 
