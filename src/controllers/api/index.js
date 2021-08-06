@@ -50,7 +50,21 @@ const createWorkout = async (req, res) => {
   }
 };
 
-const updateWorkout = (req, res) => {};
+const updateWorkout = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const workout = await Workout.findByIdAndUpdate(
+      id,
+      { $push: { exercises: req.body } },
+      { useFindAndModify: false }
+    );
+
+    return res.json(workout);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to get workout" });
+  }
+};
 
 module.exports = {
   getRange,
