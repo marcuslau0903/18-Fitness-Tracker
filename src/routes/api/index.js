@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const {
   getRange,
-  getWorkouts,
+  getLastWorkout,
   createWorkout,
   updateWorkout,
 } = require("../../controllers/api");
@@ -10,7 +10,7 @@ const {
 const router = Router();
 
 router.get("/workouts/range", getRange);
-router.get("/workouts", getWorkouts);
+router.get("/workouts", getLastWorkout);
 router.post("/workouts", createWorkout);
 router.put("/workouts/:id", updateWorkout);
 
