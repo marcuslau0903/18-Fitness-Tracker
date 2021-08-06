@@ -1,6 +1,25 @@
 const { Workout } = require("../../models");
 
-const getRange = (req, res) => {};
+const getRange = async (req, res) => {
+  try {
+    const workoutDuration = await Workout.aggregate([
+      {
+        $addFields: {
+          totalDuration: {
+            $sum: "$exercises.duration",
+          },
+        },
+      },
+    ])
+      .sort({ day: -1 })
+      .limit(7);
+
+    return res.status(200).json(workoutDuration);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ error: "Failed to get workouts" });
+  }
+};
 
 const getLastWorkout = async (req, res) => {
   try {
