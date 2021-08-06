@@ -1,18 +1,17 @@
 const { Router } = require("express");
-const path = require("path");
+
+const {
+  renderExercise,
+  renderStats,
+  renderHome,
+} = require("../../controllers/views");
 
 const router = Router();
 
-router.get("/exercise", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/exercise.html"));
-});
+router.get("/exercise", renderExercise);
 
-router.get("/stats", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/stats.html"));
-});
+router.get("/stats", renderStats);
 
-router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../public/index.html"));
-});
+router.get("/", renderHome);
 
 module.exports = router;
