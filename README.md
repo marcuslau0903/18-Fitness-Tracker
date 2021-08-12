@@ -1,4 +1,4 @@
-# 18 Nosql - fitness Tracker
+# 18 Nosql - Fitness Tracker
 
 ## Description
 
