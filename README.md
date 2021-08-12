@@ -8,4 +8,4 @@
 
 ## Link to Github repository
 
-## ScreenShots for the fitness tracker
+## ScreenShots for the Fitness Tracker
