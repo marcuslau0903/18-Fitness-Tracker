@@ -7,7 +7,6 @@
 ## Installation 
 - Clone repository to your local machine.
 - Input `npm i` to install node packages [Express,Mongoose,Morgan,NodeMon] for the Application.
-- Input `npm run seed`, `npm run dev` to run the project. 
 
 ## Link to deployed Application on Heroku
 [Click Here](https://calm-fortress-57316.herokuapp.com/)
