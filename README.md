@@ -1,13 +1,14 @@
 # 18 Nosql - Fitness-Tracker
 
-## Link to deployed Application on Heroku
-[Click Here]()
 
 ## Description
 
 ## Usage
 
 ## Installation 
+
+## Link to deployed Application on Heroku
+[Click Here]()
 
 ## Link to Github repository
 
